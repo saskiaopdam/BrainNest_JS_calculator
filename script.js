@@ -6,8 +6,9 @@ const equalsButton = document.querySelector(".equals-button");
 const clearButton = document.querySelector(".clear-button");
 const negativeButton = document.querySelector(".negative-button");
 const percentButton = document.querySelector(".percent-button");
+const deleteButton = document.querySelector(".delete-button");
 
-// let displayValue = display.textContent;
+let displayValue = display.textContent;
 
 let digitCount = 0;
 let decimalCount = 0;
@@ -78,22 +79,22 @@ function operate (num1, operator, num2) {
     }
 };
 
-function displayOperationResult (operationResult) {
-    if (Number(operationResult) === operationResult && operationResult % 1 !== 0) {
-        display.textContent = Number.parseFloat(operationResult).toFixed(2);
+function displayResult (result) {
+    if (Number(result) === result && result % 1 !== 0) {
+        display.textContent = Number.parseFloat(result).toFixed(2);
     } else {
-        display.textContent = operationResult;
+        display.textContent = result;
     }
     console.log(`Operation result: ${display.textContent}`);
 };
 
-function displayCalculationResult (calculationResult) {
-    if (Number(calculationResult) === calculationResult && calculationResult % 1 !== 0) {
-        display.textContent = Number.parseFloat(calculationResult).toFixed(2);
-    } else {
-        display.textContent = calculationResult;
+function checkDivisionByZero() {
+    console.log(`checking division by zero`)
+    if (operator === "/" && rightOperand === "0") {
+        display.textContext = "Error; can't divide by 0"
+        console.log(`You clicked /`);
+        alert(`You can't divide by 0.`);
     }
-    console.log(`Calculation result: ${display.textContent}`);
 };
 
 function resetDisplay () {
@@ -111,7 +112,8 @@ function showPercentage() {
 
 digitButtons.forEach((digitButton) => {
     digitButton.addEventListener("click", (e) => {
-        if (digitCount === 0) {
+        digitCount++  
+        if (digitCount === 1) {
             clearDisplay();
             displayDigit(e);
         }
@@ -120,7 +122,6 @@ digitButtons.forEach((digitButton) => {
         } else {
             displayDigit(e);    
         }
-        digitCount++  
     })
 })
 
@@ -143,9 +144,10 @@ operatorButtons.forEach((operatorButton) => {
                 break;
             case leftOperand && !rightOperand: 
                 saveRightOperand();
-                const operationResult = operate(+leftOperand, operator, +rightOperand);
-                displayOperationResult(operationResult);
-                saveLeftOperand(operationResult);
+                checkDivisionByZero();
+                const result = operate(+leftOperand, operator, +rightOperand);
+                displayResult(result);
+                saveLeftOperand(result);
                 rightOperand = undefined;
                 saveOperator(e.target.textContent);
         }
@@ -160,8 +162,9 @@ equalsButton.addEventListener("click", (e) => {
     if (leftOperand && !rightOperand) {
         e.target.setAttribute("disabled", false);
         saveRightOperand();
-        const calculationResult = operate(+leftOperand, operator, +rightOperand);
-        displayCalculationResult(calculationResult);
+        checkDivisionByZero();
+        const result = operate(+leftOperand, operator, +rightOperand);
+        displayResult(result);
         console.log(`The whole calcultation was: ${calculation.join(" ")}`)
     }
 });
@@ -176,4 +179,8 @@ negativeButton.addEventListener("click", (e) => {
 
 percentButton.addEventListener("click", (e) => {
     showPercentage();
+});
+
+deleteButton.addEventListener("click", (e) => {
+    display.textContent = display.textContent.slice(0, - 1);
 });

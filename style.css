@@ -38,7 +38,7 @@
     color: white;
 }
 
-.clear-button, .negative-button, .percent-button {
+.clear-button, .negative-button, .percent-button, .delete-button {
     background-color: #555;
 }
 
@@ -51,7 +51,6 @@
 }
 
 .zero-button {
-    flex: 50%;
     border-bottom-left-radius: 10px;
 }
 
