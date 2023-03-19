@@ -17,7 +17,6 @@ let equalsCount = 0;
 let leftOperand;
 let operator;
 let rightOperand;
-let calculation = [];
 
 function displayDigit (e) {
     display.textContent = display.textContent.replace(/^0+/, '');
@@ -34,17 +33,14 @@ function clearDisplay () {
 
 function saveLeftOperand () {
     leftOperand = display.textContent;
-    calculation.push(leftOperand);
 };
 
 function saveRightOperand () {
     rightOperand = display.textContent;
-    calculation.push(rightOperand);
 };
 
 function saveOperator (usedOperator) {
     operator = usedOperator;
-    calculation.push(operator);
 };
 
 function add (num1, num2) {
