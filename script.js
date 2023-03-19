@@ -19,7 +19,7 @@ let operator;
 let rightOperand;
 
 function displayDigit (e) {
-    display.textContent = display.textContent.replace(/^0+/, '');
+    display.textContent = display.textContent.replace(/^0/, '');
     display.textContent += e.target.textContent;
 };
 
