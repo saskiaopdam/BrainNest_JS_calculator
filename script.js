@@ -56,7 +56,13 @@ function multiply (num1, num2) {
 };
 
 function divide (num1, num2) {
-    return num1 / num2;
+    console.log(`num2: ${num2}`);
+    if (num2 === 0) {console.log(`num2 is 0`)}
+    if (num2 === 0) {
+        return `Error`
+    } else {
+        return num1 / num2;
+    }
 };
 
 function operate (num1, operator, num2) {
@@ -73,17 +79,10 @@ function operate (num1, operator, num2) {
 };
 
 function displayResult (result) {
-    if (result % 1 !== 0) {
+    if (typeof result === result && result % 1 !== 0) {
         display.textContent = result.toFixed(2);
     } else {
         display.textContent = result;
-    }
-};
-
-function checkDivisionByZero() {
-    if (operator === "/" && rightOperand === "0") {
-        display.textContext = "Error; can't divide by 0";
-        alert(`You can't divide by 0.`);
     }
 };
 
@@ -134,7 +133,6 @@ operatorButtons.forEach((operatorButton) => {
                 break;
             case leftOperand && !rightOperand: 
                 saveRightOperand();
-                checkDivisionByZero();
                 const result = operate(+leftOperand, operator, +rightOperand);
                 displayResult(result);
                 saveLeftOperand(result);
@@ -152,7 +150,6 @@ equalsButton.addEventListener("click", (e) => {
     if (leftOperand && !rightOperand) {
         e.target.setAttribute("disabled", false);
         saveRightOperand();
-        checkDivisionByZero();
         const result = operate(+leftOperand, operator, +rightOperand);
         displayResult(result);
     }
