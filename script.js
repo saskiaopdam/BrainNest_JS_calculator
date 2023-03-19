@@ -80,8 +80,9 @@ function operate (num1, operator, num2) {
 };
 
 function displayResult (result) {
-    if (Number(result) === result && result % 1 !== 0) {
-        display.textContent = Number.parseFloat(result).toFixed(2);
+    console.log(`type of "result": ${typeof result}`)
+    if (result % 1 !== 0) {
+        display.textContent = result.toFixed(2);
     } else {
         display.textContent = result;
     }
