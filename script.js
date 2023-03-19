@@ -77,7 +77,7 @@ function operate (num1, operator, num2) {
 };
 
 function displayResult (result) {
-    if (typeof result === result && result % 1 !== 0) {
+    if (typeof result === "number" && result % 1 !== 0) {
         display.textContent = result.toFixed(2);
     } else {
         display.textContent = result;
