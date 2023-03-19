@@ -35,19 +35,16 @@ function clearDisplay () {
 function saveLeftOperand () {
     leftOperand = display.textContent;
     calculation.push(leftOperand);
-    console.log(`Left operand: ${leftOperand}`);
 };
 
 function saveRightOperand () {
     rightOperand = display.textContent;
     calculation.push(rightOperand);
-    console.log(`Right operand: ${rightOperand}`);
 };
 
 function saveOperator (usedOperator) {
     operator = usedOperator;
     calculation.push(operator);
-    console.log(`Operator: ${operator}`);
 };
 
 function add (num1, num2) {
@@ -80,20 +77,16 @@ function operate (num1, operator, num2) {
 };
 
 function displayResult (result) {
-    console.log(`type of "result": ${typeof result}`)
     if (result % 1 !== 0) {
         display.textContent = result.toFixed(2);
     } else {
         display.textContent = result;
     }
-    console.log(`Operation result: ${display.textContent}`);
 };
 
 function checkDivisionByZero() {
-    console.log(`checking division by zero`)
     if (operator === "/" && rightOperand === "0") {
-        display.textContext = "Error; can't divide by 0"
-        console.log(`You clicked /`);
+        display.textContext = "Error; can't divide by 0";
         alert(`You can't divide by 0.`);
     }
 };
@@ -166,7 +159,6 @@ equalsButton.addEventListener("click", (e) => {
         checkDivisionByZero();
         const result = operate(+leftOperand, operator, +rightOperand);
         displayResult(result);
-        console.log(`The whole calcultation was: ${calculation.join(" ")}`)
     }
 });
 
