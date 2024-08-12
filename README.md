@@ -1,13 +1,21 @@
-# JavaScript Calculator
+# Brainnest JavaScript Calculator
 2023 - JavaScript applicatie met basale rekenfuncties. Je kunt met de calculator ook percenteren, het display resetten met AC en de invoer verwijderen met DEL.
 
-## Opdrachtomschrijving
+## Omschrijving
 De calculator was een oefenopdracht die ik maakte tijdens een *Frontend Industry Training* bij Brainnest. De uitgebreide instructies inclusief bonuspunten staan hieronder. [Deze UI diende als voorbeeld.](https://mrbuddh4.github.io/calculator/)
 
-## Bug
+## Deployment
+[De app staat op GitHub Pages.](https://saskiaopdam.github.io/Brainnest-Javascript-Calculator/)
+
+## Technologie
+- JavaScript*
+- HTML/CSS
+- GitHub Pages Automatic Deployment
+  
+### * Bug
 Er zit nog een kleine bug in de applicatie. Als je na een berekening het display reset met AC en vervolgens op een cijferknop klikt, dan gebeurt iets onverwachts. De 0 verdwijnt maar het gekozen cijfer verschijnt niet op het display.
 
-### Instructies voor de opdracht
+### * Instructies voor de opdracht
 Dit zijn de volledige instructies zoals verstrekt door de instructeur van Brainnest.
 
 1. Your calculator is going to contain functions for all of the basic math operators you typically
