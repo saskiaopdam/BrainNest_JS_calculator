@@ -1,5 +1,5 @@
 # JavaScript Calculator
-2023 - JavaScript applicatie met basale rekenfuncties. Je kunt met de calculator optellen, aftrekken, vermenigvuldigen en delen. Je kunt ook het percentage berekenen, het display resetten met AC en de invoer verwijderen met DEL.
+2023 - JavaScript applicatie met basale rekenfuncties. Je kunt met de calculator optellen, aftrekken, vermenigvuldigen en delen. Je kunt ook percenteren, het display resetten met AC en de invoer verwijderen met DEL.
 
 ## Opdrachtomschrijving
 De calculator was een oefenopdracht die ik maakte tijdens een *Frontend Industry Training* bij Brainnest. De uitgebreide instructies inclusief bonuspunten staan hieronder. [Deze UI diende als voorbeeld.](https://mrbuddh4.github.io/calculator/)
