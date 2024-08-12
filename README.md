@@ -1,11 +1,19 @@
-_Brainnest Frontend Industry Training_
+# JavaScript Calculator
+2023 - JavaScript applicatie met basale rekenfuncties. Je kunt met de calculator optellen, aftrekken, vermenigvuldigen en delen. Je kunt ook het percentage berekenen, het display resetten met AC en de invoer verwijderen met DEL.
 
----
+## Opdrachtomschrijving
+De calculator was een oefenopdracht die ik maakte tijdens een *Frontend Industry Training* bij Brainnest. De uitgebreide instructies inclusief bonuspunten staan hieronder. [Deze UI diende als voorbeeld.](https://mrbuddh4.github.io/calculator/)
 
-# JavaScript Advanced
+## Bug
+Er zit nog een kleine bug in de applicatie. Als je na een berekening het display reset met AC en vervolgens op een cijferknop klikt, dan gebeurt iets onverwachts. De 0 verdwijnt maar het gekozen cijfer verschijnt niet op het display.
 
-## Assignment 3 - Calculator
+### Instructies - samenvatting in het Nederlands
+1. De calculator moet kunnen optellen, aftrekken, vermenigvuldigen en delen.
+2. De calculator moet ook een display hebben en een clear knop.
+3. Zorg ervoor dat een lang getal op het display past.
+4. Zorg ervoor dat je niet kunt delen door 0. Toon dan een foutmelding.
 
+### Instructies - volledig in het Engels
 1. Your calculator is going to contain functions for all of the basic math operators you typically
 find on simple calculators, so start by creating functions for the following items and testing them in your browser’s console.
     - add
