@@ -7,13 +7,9 @@ De calculator was een oefenopdracht die ik maakte tijdens een *Frontend Industry
 ## Bug
 Er zit nog een kleine bug in de applicatie. Als je na een berekening het display reset met AC en vervolgens op een cijferknop klikt, dan gebeurt iets onverwachts. De 0 verdwijnt maar het gekozen cijfer verschijnt niet op het display.
 
-### Instructies - samenvatting in het Nederlands
-1. De calculator moet kunnen optellen, aftrekken, vermenigvuldigen en delen.
-2. De calculator moet ook een display hebben en een clear knop.
-3. Zorg ervoor dat een lang getal op het display past.
-4. Zorg ervoor dat je niet kunt delen door 0. Toon dan een foutmelding.
+### Instructies voor de opdracht
+Dit zijn de volledige instructies zoals verstrekt door de instructeur van Brainnest.
 
-### Instructies - volledig in het Engels
 1. Your calculator is going to contain functions for all of the basic math operators you typically
 find on simple calculators, so start by creating functions for the following items and testing them in your browser’s console.
     - add
